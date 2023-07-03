@@ -1,41 +1,41 @@
-import Movie from "./components/movie";
+import "./App.css";
+import UserCard from "./components/UserCard";
 
-const movies = [
+const user = [
     {
         id: 1,
-        titulo: "Harry Potter",
-        texto: "Filme de magia",
-        diretor: "Chris Columbus",
+        nome: "João",
+        idade: 18,
+        cidade: "São Paulo",
+        objetivo: "Desenvolvedor Full Stack",
+        isPremium: true,
     },
     {
         id: 2,
-        titulo: "Senhor dos Anéis",
-        texto: "Filme de fantasia",
-        diretor: "Peter Jackson",
+        nome: "Maria",
+        idade: 22,
+        cidade: "Rio de Janeiro",
+        objetivo: "Desenvolvedora Front-end",
+        isPremium: false,
     },
     {
         id: 3,
-        titulo: "O Poderoso Chefão",
-        texto: "Filme de máfia",
-        diretor: "Francis Ford Coppola",
+        nome: "Pedro",
+        idade: 27,
+        cidade: "Belo Horizonte",
+        objetivo: "Desenvolvedor Back-end",
+        isPremium: true,
     },
 ];
 
-const App = () => {
+function App() {
     return (
-        <div style={{width: "100vw", display: "flex", flexDirection: "column", gap: "12px", alignItems: "center"}}>
-            {movies.map((movie) => {
-                return (
-                    <Movie
-                        key={movie.id}
-                        titulo={movie.titulo}
-                        texto={movie.texto}
-                        diretor={movie.diretor}
-                    />
-                );
+        <div className="App">
+            {user.map((user) => {
+                return <UserCard key={user.id} user={user} />;
             })}
         </div>
     );
-};
+}
 
 export default App;
