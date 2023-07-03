@@ -1,0 +1,27 @@
+* {
+  transition: background-color 300ms ease-in-out;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    width: 12rem;
+    padding: 0.5rem;
+}
+
+.taskItem.completed h3 {
+    text-decoration: line-through;
+}
+
+.taskItem.completed {
+    background-color: lightgreen;
+}
+
+.taskItem.pending {
+    background-color: lightcoral;
+}
+
+.taskItem:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}
